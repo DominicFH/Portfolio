@@ -1,6 +1,25 @@
 import Link from "next/link";
+import NavButton from "./NavButton.js";
 
 export default function Nav() {
+  const pages = [
+    {
+      pageName: "About Me",
+      pathName: "/",
+    },
+    {
+      pageName: "Career History",
+      pathName: "/career",
+    },
+    {
+      pageName: "My Projects",
+      pathName: "/projects",
+    },
+    {
+      pageName: "Get In Touch",
+      pathName: "/contact",
+    },
+  ];
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start flex-1">
@@ -9,20 +28,19 @@ export default function Nav() {
         </Link>
       </div>
       <div className="navbar-end">
-        <ul className="menu menu-vertical lg:menu-horizontal rounded-box">
-          <li>
-            <Link href={"/"}>About Me</Link>
-          </li>
-          <li>
-            <Link href={"/career"}>Career History</Link>
-          </li>
-          <li>
-            <Link href={"/projects"}>My Projects</Link>
-          </li>
-          <li>
-            <Link href={"/contact"}>Get In Touch</Link>
-          </li>
-        </ul>
+        <div className="tabs tabs-boxed">
+          <ul className="menu menu-vertical lg:menu-horizontal rounded-box">
+            {pages.map((page) => {
+              return (
+                <NavButton
+                  key={page.pageName}
+                  pageName={page.pageName}
+                  pathName={page.pathName}
+                />
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );
