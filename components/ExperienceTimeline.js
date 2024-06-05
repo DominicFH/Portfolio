@@ -14,7 +14,6 @@ export default function ExperienceTimeline({ experiences, initialDirectionLeft }
       </li>
       {experiences.map((experience, index) => {
         const isOddExperience = index % 2;
-        console.log(isOddExperience);
         return (
           <ExperienceItem
             direction={!isOddExperience ? directions[0] : directions[1]}
