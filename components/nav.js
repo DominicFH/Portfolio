@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NavButton from "./NavButton.js";
+import Image from "next/image.js";
 
 export default function Nav() {
   const pages = [
@@ -15,15 +16,16 @@ export default function Nav() {
       pageName: "My Projects",
       pathName: "/projects",
     },
-    {
-      pageName: "Get In Touch",
-      pathName: "/contact",
-    },
   ];
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start flex-1">
-        <Link href={"/"} className="btn btn-ghost text-xl">
+        <div className="avatar">
+          <div className="w-24 rounded-full">
+            <Image src={"/images/profile.jpg"} height={500} width={500} />
+          </div>
+        </div>
+        <Link href={"/"} className="btn btn-ghost text-xl mx-2">
           dominic-harris.dev
         </Link>
       </div>
@@ -31,13 +33,7 @@ export default function Nav() {
         <div className="tabs tabs-boxed">
           <ul className="menu menu-vertical lg:menu-horizontal rounded-box">
             {pages.map((page) => {
-              return (
-                <NavButton
-                  key={page.pageName}
-                  pageName={page.pageName}
-                  pathName={page.pathName}
-                />
-              );
+              return <NavButton key={page.pageName} pageName={page.pageName} pathName={page.pathName} />;
             })}
           </ul>
         </div>

@@ -3,11 +3,10 @@ import { usePathname } from "next/navigation";
 
 export default function NavButton({ pageName, pathName }) {
   const currentPath = usePathname();
-  const className =
-    currentPath === pathName ? "flex-1 tab tab-active" : "flex-1 tab";
+  const activeClassName = currentPath === pathName ? "tab-active" : "flex-1 tab";
   return (
     <li>
-      <Link role="tab" className={className} href={pathName}>
+      <Link role="tab" className={`mx-2 flex-1 tab ${activeClassName}`} href={pathName}>
         {pageName}
       </Link>
     </li>
