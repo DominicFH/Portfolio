@@ -16,6 +16,10 @@ export default function Nav() {
       pageName: "My Projects",
       pathName: "/projects",
     },
+    {
+      pageName: "My CV",
+      pathName: "/pdf/Dominic-Harris-Developer-CV.pdf",
+    },
   ];
   return (
     <div className="navbar bg-base-100">
