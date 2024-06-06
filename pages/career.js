@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import ExperienceTimeline from "../components/ExperienceTimeline";
+import Main from "../components/Main";
 
 const previousExperiences = [
   {
@@ -50,22 +51,22 @@ export default function Career() {
       <Head>
         <title>Career</title>
       </Head>
-      <main className="px-2">
-        <div className="collapse collapse-arrow bg-base-200 my-2">
+      <Main>
+        <div className="collapse collapse-arrow bg-base-200 mb-2">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium">Prior Experience</div>
           <div className="collapse-content">
             <ExperienceTimeline experiences={previousExperiences} initialDirectionLeft={false} />
           </div>
         </div>
-        <div className="collapse collapse-arrow bg-base-200 my-2">
+        <div className="collapse collapse-arrow bg-base-200  mb-2">
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title text-xl font-medium">Coding Career</div>
           <div className="collapse-content">
             <ExperienceTimeline experiences={codingExperiences} initialDirectionLeft={true} />
           </div>
         </div>
-      </main>
+      </Main>
     </Layout>
   );
 }

@@ -22,7 +22,7 @@ export default function Nav() {
     },
   ];
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 h-1/6">
       <div className="navbar-start flex-1">
         <div className="avatar">
           <div className="w-24 rounded-full">

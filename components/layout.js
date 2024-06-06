@@ -2,7 +2,7 @@ import Nav from "./nav";
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div className="h-screen">
       <Nav />
       {children}
     </div>
