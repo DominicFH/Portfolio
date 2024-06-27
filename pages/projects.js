@@ -43,7 +43,7 @@ export default function Projects() {
         <div className="h-full flex justify-items-center">
           <div className="carousel carousel-center rounded-box flex-initial items-center">
             {projects.map((project) => {
-              return <ProjectCard project={project} />;
+              return <ProjectCard key={project.name} project={project} />;
             })}
           </div>
         </div>
