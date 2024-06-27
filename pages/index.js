@@ -12,7 +12,7 @@ export default function Home() {
         <div className="hero bg-base-200 rounded-box h-full w-auto">
           <div className="hero-content text-center">
             <div className="max-w-md">
-              <h1 className="text-5xl font-bold">I\'m Dominic</h1>
+              <h1 className="text-5xl font-bold">I&apos;m Dominic</h1>
               <p className="py-6">
                 A Full Stack Developer based in North East England I have been coding since 2021 when I was awarded a fully paid scholarship to attend an
                 intensive 13 week coding bootcamp in which I gained the skills to launch my developer career after years in the customer service/support
