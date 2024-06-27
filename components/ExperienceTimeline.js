@@ -16,6 +16,7 @@ export default function ExperienceTimeline({ experiences, initialDirectionLeft }
         const isOddExperience = index % 2;
         return (
           <ExperienceItem
+            key={experience.title}
             direction={!isOddExperience ? directions[0] : directions[1]}
             date={experience.date}
             title={experience.title}
